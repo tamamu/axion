@@ -1,0 +1,188 @@
+/* Axion CSS Framework
+ *
+ * Copyright (c) Eddie.
+ * Distributed under the terms of the MIT License.
+ */
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+}
+
+body[fit=true] {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+*[maximize] {
+  flex: 1;
+}
+*[center] {
+  margin-left: auto;
+  margin-right: auto;
+}
+*[w-3-4] {
+  width: 75%;
+}
+*[w-1-2] {
+  width: 50%;
+}
+*[w-1-4] {
+  width: 25%;
+}
+
+/* Colors    FG      BG
+ * primary - #f9f9f9 #3F51B5
+ * notify  - #f9f9f9 #E91E63
+ */
+
+.ax-primary {
+  background-color: #3F51B5;
+  color: #f9f9f9;
+}
+.ax-notify {
+  background-color: #E91E63;
+  color: #f9f9f9;
+}
+.ax-text-primary {
+  color: #3F51B5;
+}
+.ax-text-notify {
+  color: #E91E63;
+}
+
+/* Components
+ * appbar
+ * bar
+ * container
+ * dropdown - dropdown-menu
+ * list
+ * panel
+ * overlay
+ * sidebar
+ */
+
+.ax-appbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 64px;
+}
+.ax-appbar .ax-height {
+  height: 64px;
+}
+.ax-appbar .ax-left {
+  margin-left: 8px;
+}
+.ax-appbar .ax-right {
+  margin-left: auto;
+  margin-right: 8px;
+}
+.ax-appbar .ax-middle {
+  display: flex;
+  align-items: center;
+}
+
+.ax-container {
+  flex: 1;
+  padding: 0 8px 0;
+}
+
+.ax-dropdown {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+}
+.ax-dropdown-label {
+  font-size: 1em;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 8px 0;
+  apperance: none;
+}
+.ax-dropdown .ax-dropdown-menu {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+}
+.ax-dropdown-label:focus .ax-dropdown-menu {
+  display: block;
+  animation: push-down .1s;
+}
+.ax-dropdown-menu:active {
+  display: block;
+}
+@keyframes push-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.ax-list {
+  display: flex;
+  flex-direction: column;
+}
+.ax-list[unstyle] {
+  list-style: none;
+}
+.ax-list[direction=horizontal] {
+  flex-direction: row;
+}
+.ax-list[item-highlight] *:hover{
+  background-color: rgba(0,0,0,.24);
+}
+.ax-list[item-padding] * {
+  padding: 0 8px 0;
+}
+
+.ax-panel {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+  margin-top: 16px;
+}
+.ax-panel[padding] {
+  padding: 8px;
+}
+.ax-overlay {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background-color: rgba(0,0,0,.74);
+}
+
+.ax-with-sidebar {
+  display: flex;
+  flex-direction: row;
+  transform: translateX(-200px);
+  transition: transform .15s ease-out;
+}
+
+.ax-with-sidebar.ax-active {
+  transform: translateX(0);
+  transition: transform .15s ease-out;
+}
+
+.ax-sidebar {
+  width: 200px;
+  min-height: 100%;
+}

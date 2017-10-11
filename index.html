@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Axion CSS Framework</title>
+  <link rel="stylesheet" href="./axion.css">
+  <script src="./axion.js"></script>
+</head>
+<body fit="true">
+  <script>
+  </script>
+  <header class="ax-appbar ax-primary">
+    <div class="ax-left ax-middle">
+      <h1 class="">Axion CSS Framework</h1>
+    </div>
+    <div class="ax-right ax-middle">
+    </div>
+  </header>
+  <ul class="ax-list ax-primary" direction="horizontal" unstyle>
+    <li class="ax-dropdown">
+      <label tabindex="0" class="ax-dropdown-label" href="javascript:void(0);">File
+        <ul class="ax-dropdown-menu ax-list ax-primary" unstyle item-highlight item-padding>
+          <li>Open</li>
+          <li>Save</li>
+          <li>Quit</li>
+        </ul>
+      </label>
+    </li>
+    <li class="ax-dropdown">
+      <label tabIndex="0" class="ax-dropdown-label">Components
+        <ul class="ax-dropdown-menu ax-list ax-notify" unstyle item-highlight item-padding>
+          <li onclick="Axion.overlay(true).onclick=()=>Axion.overlay(false);">Overlay</li>
+          <li onclick="Axion.toggle('.ax-with-sidebar');">Sidebar</li>
+        </ul>
+      </label>
+    </li>
+  </ul>
+  <section class="ax-with-sidebar" style="height: 100%;" maximize>
+    <div id="dm-sidebar" class="ax-sidebar ax-primary">
+    </div>
+    <ul class="ax-container ax-list" unstyle>
+      <li class="ax-panel" w-1-2 padding center>
+        <div class="ax-container">
+          <h1>H1 h1 ...</h1>
+          <h2>H2 h2 ...</h2>
+          <h3>H3 h3 ...</h3>
+          <h4>H4 h4 ...</h4>
+          <h5>H5 h5 ...</h5>
+          <h6>H6 h6 ...</h6>
+          <p>Paragraph paragraph ...</p>
+          <strong>Strong strong ...</strong>
+          <i>Italic italic ...</i>
+          <del>Delete delete ...</del>
+        </div>
+      </li>
+    </ul>
+  </section>
+</body>
+</html>
