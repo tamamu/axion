@@ -18,24 +18,26 @@
   </header>
   <ul class="ax-list ax-primary" direction="horizontal" unstyle>
     <li class="ax-dropdown">
-      <label tabindex="0" class="ax-dropdown-label" href="javascript:void(0);">File
+      <span tabindex="0" class="ax-dropdown-container">
+        <p class="ax-dropdown-label" padding>File</p>
         <ul class="ax-dropdown-menu ax-list ax-primary" unstyle item-highlight item-padding>
-          <li>Open</li>
-          <li>Save</li>
-          <li>Quit</li>
+          <li tabindex="0">Open</li>
+          <li tabindex="0">Save</li>
+          <li tabindex="0">Quit</li>
         </ul>
-      </label>
+      </span>
     </li>
     <li class="ax-dropdown">
-      <label tabIndex="0" class="ax-dropdown-label">Components
+      <span tabindex="0" class="ax-dropdown-container">
+        <p class="ax-dropdown-label" padding>Components</p>
         <ul class="ax-dropdown-menu ax-list ax-notify" unstyle item-highlight item-padding>
-          <li onclick="Axion.overlay(true).onclick=()=>Axion.overlay(false);">Overlay</li>
-          <li onclick="Axion.toggle('.ax-with-sidebar');">Sidebar</li>
+          <li tabindex="0" onclick="Axion.overlay(true).onclick=()=>Axion.overlay(false);">Overlay</li>
+          <li tabindex="0" onclick="Axion.toggle('.ax-with-sidebar');">Sidebar</li>
         </ul>
-      </label>
+      </span>
     </li>
   </ul>
-  <section class="ax-with-sidebar" style="height: 100%;" maximize>
+  <section class="ax-with-sidebar" maximize>
     <div id="dm-sidebar" class="ax-sidebar ax-primary">
     </div>
     <ul class="ax-container ax-list" unstyle>

@@ -104,20 +104,28 @@ body[fit=true] {
 }
 .ax-dropdown-label {
   font-size: 1em;
-  background-color: transparent;
   color: inherit;
   border: none;
   cursor: pointer;
   outline: none;
-  padding: 0 8px 0;
   apperance: none;
+}
+.ax-dropdown-label:hover {
+  background-color: rgba(255,255,255,.12);
+}
+.ax-dropdown-label[padding] {
+  padding: 0 8px 0;
 }
 .ax-dropdown .ax-dropdown-menu {
   display: none;
   position: fixed;
   z-index: 99999;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
 }
-.ax-dropdown-label:focus .ax-dropdown-menu {
+.ax-dropdown-container:focus .ax-dropdown-label {
+  background-color: rgba(0,0,0,.16);
+}
+.ax-dropdown-container:focus .ax-dropdown-menu {
   display: block;
   animation: push-down .1s;
 }
