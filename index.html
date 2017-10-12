@@ -16,11 +16,11 @@
     <div class="ax-right ax-middle">
     </div>
   </header>
-  <ul class="ax-list ax-primary" direction="horizontal" unstyle>
+  <ul class="ax-list ax-primary" horizontal unstyle>
     <li class="ax-dropdown">
       <span tabindex="0" class="ax-dropdown-container">
         <p class="ax-dropdown-label" padding>File</p>
-        <ul class="ax-dropdown-menu ax-list ax-primary" unstyle item-highlight item-padding>
+        <ul class="ax-dropdown-menu ax-list ax-primary ax-panel" unstyle item-highlight item-padding>
           <li tabindex="0">Open</li>
           <li tabindex="0">Save</li>
           <li tabindex="0">Quit</li>
@@ -30,7 +30,7 @@
     <li class="ax-dropdown">
       <span tabindex="0" class="ax-dropdown-container">
         <p class="ax-dropdown-label" padding>Components</p>
-        <ul class="ax-dropdown-menu ax-list ax-notify" unstyle item-highlight item-padding>
+        <ul class="ax-dropdown-menu ax-list ax-notify ax-panel" unstyle item-highlight item-padding>
           <li tabindex="0" onclick="Axion.overlay(true).onclick=()=>Axion.overlay(false);">Overlay</li>
           <li tabindex="0" onclick="Axion.toggle('.ax-with-sidebar');">Sidebar</li>
         </ul>
@@ -38,22 +38,60 @@
     </li>
   </ul>
   <section class="ax-with-sidebar" maximize>
-    <div id="dm-sidebar" class="ax-sidebar ax-primary">
+    <div id="dm-sidebar" class="ax-sidebar ax-primary ax-panel">
     </div>
-    <ul class="ax-container ax-list" unstyle>
+    <ul class="ax-container ax-list" unstyle item-spacing vpad>
       <li class="ax-panel" w-1-2 padding center>
-        <div class="ax-container">
-          <h1>H1 h1 ...</h1>
-          <h2>H2 h2 ...</h2>
-          <h3>H3 h3 ...</h3>
-          <h4>H4 h4 ...</h4>
-          <h5>H5 h5 ...</h5>
-          <h6>H6 h6 ...</h6>
+        <div class="ax-container ax-content">
+          <h1>Hello World</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h2>Second Level</h2>
+          <p>Pellentesque habitant morbi tristique senectus et netus et
+            malesuada fames ac turpis egestas.</p>
+          <ol>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+          </ol>
+          <h3>Third Level</h3>
+          <ul>
+            <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi,
+              euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras
+              consequat.</li>
+            <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas
+              augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam
+              dui mi, tincidunt quis, accumsan porttitor, facilisis luctus,
+              metus.</li>
+            <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec
+              consectetuer ligula vulputate sem tristique cursus. Nam nulla
+              quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+            <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis
+              auctor, ultrices ut, elementum vulputate, nunc.</li>
+          </ul>
+          <h4>Fourth Level</h4>
+          <h5>Fifth Level</h5>
+          <h6>Sixth Level</h6>
           <p>Paragraph paragraph ...</p>
           <strong>Strong strong ...</strong>
           <i>Italic italic ...</i>
           <del>Delete delete ...</del>
         </div>
+      </li>
+      <li class="ax-panel" w-1-2 padding center>
+        <span class="ax-content">
+          <h3>Horizontal Menu</h3>
+        </span>
+        <ul class="ax-list" item-highlight item-pointing item-padding unstyle horizontal>
+          <li tabindex="0">First</li>
+          <li tabindex="0">Second</li>
+          <li tabindex="0">Third</li>
+        </ul>
       </li>
     </ul>
   </section>
