@@ -136,9 +136,11 @@ body[fit=true] {
   margin: 0.5em 0;
 }
 .ax-content ul {
+  line-height: 1.4em;
   margin: 0 0 0 2em;
 }
 .ax-content ol {
+  line-height: 1.4em;
   margin: 0 0 0 2em;
 }
 
