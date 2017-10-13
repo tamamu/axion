@@ -18,8 +18,8 @@ body {
 body[fit=true] {
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -235,14 +235,24 @@ body[fit=true] {
   flex-direction: row;
   transform: translateX(-200px);
   transition: transform .15s ease-out;
+  width: calc(100% + 200px);
+}
+.ax-with-sidebar.ax-right {
+  transform: translateX(0);
 }
 .ax-with-sidebar.ax-active {
   transform: translateX(0);
   transition: transform .15s ease-out;
 }
+.ax-with-sidebar.ax-right.ax-active {
+  transform: translateX(-200px);
+}
 .ax-sidebar {
   width: 200px;
   min-height: 100%;
+}
+.ax-with-sidebar.ax-right > .ax-sidebar {
+  order: 2;
 }
 
 
