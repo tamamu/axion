@@ -211,7 +211,6 @@ body[fit=true] {
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
-  background-color: #fefefe;
 }
 .ax-panel[padding] {
   padding: 8px;
@@ -270,6 +269,10 @@ body[fit=true] {
 .ax-notify {
   background-color: #E91E63;
   color: #f9f9f9;
+}
+.ax-normal {
+  background-color: #fefefe;
+  color: #333333;
 }
 .ax-background {
   background-color: #f9f9f9;

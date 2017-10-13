@@ -41,7 +41,7 @@
     <div id="dm-sidebar" class="ax-sidebar ax-primary ax-panel">
     </div>
     <ul class="ax-container ax-list" unstyle item-spacing vpad>
-      <li class="ax-panel" w-1-2 padding center>
+      <li class="ax-panel ax-normal" w-1-2 padding center>
         <div class="ax-container ax-content">
           <h1>Hello World</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -83,7 +83,7 @@
           <del>Delete delete ...</del>
         </div>
       </li>
-      <li class="ax-panel" w-1-2 padding center>
+      <li class="ax-panel ax-normal" w-1-2 padding center>
         <span class="ax-content">
           <h3>Horizontal Menu</h3>
         </span>
@@ -91,6 +91,62 @@
           <li tabindex="0">First</li>
           <li tabindex="0">Second</li>
           <li tabindex="0">Third</li>
+        </ul>
+      </li>
+      <li class="ax-panel ax-normal" w-1-2 padding center>
+        <span class="ax-content">
+          <h3>Change Theme</h3>
+        </span>
+        <script>
+          const css = 'axion.css';
+          function themeDefault() {
+            Axion.setTheme(css, Axion.defaultTheme());
+          }
+          function themeSolarizedDark() {
+            Axion.setTheme(css, {
+              primary: {
+                bg: '#268BD2',
+                fg: '#FDF6E3'
+              },
+              notify: {
+                bg: '#B58900',
+                fg: '#FDF6E3'
+              },
+              normal: {
+                bg: '#073642',
+                fg: '#839496'
+              },
+              background: {
+                bg: '#002B36',
+                fg: '#586E75'
+              }
+            });
+          }
+          function themeLucario() {
+            Axion.setTheme(css, {
+              primary: {
+                bg: '#5C98CD',
+                fg: '#F8F8F2'
+              },
+              notify: {
+                bg: '#E3BF21',
+                fg: '#2B3E50'
+              },
+              normal: {
+                bg: '#2B3E50',
+                fg: '#F8F8F2'
+              },
+              background: {
+                bg: '#303030',
+                fg: '#AAAAAA'
+              }
+            });
+          }
+        </script>
+        <ul class="ax-list" item-highlight item-pointing unstyle>
+          <li tabindex="0" onclick="themeDefault();">Default</li>
+          <li tabindex="0" onclick="themeSolarizedDark();">Solarized Dark</li>
+          <li tabindex="0" onclick="themeLucario();">Lucario</li>
         </ul>
       </li>
     </ul>
